@@ -5,9 +5,9 @@ function showPopup(reason) {
     if (reason === 'discount') {
         offerText.innerText = 'Get 50% off your next month if you stay. Limited time offer!';
     } else if (reason === 'pause') {
-        offerText.innerText = 'Need a break? Pause your subscription and resume when you’re ready!';
+        offerText.innerText = 'Need a break? Pause your subscription instead and resume when you’re ready!';
     } else {
-        offerText.innerText = 'We have options specifically for your needs!';
+        offerText.innerText = 'We have special options for you. Let us know your needs!';
     }
     
     popup.classList.remove('hidden');
