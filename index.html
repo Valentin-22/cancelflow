@@ -8,24 +8,24 @@
 </head>
 <body>
     <div class="container">
-        <h2>Wait, [Your Name]! <span class="highlight">Before you go...</span></h2>
-        <p>Are you sure you want to lose access to your exclusive Smodin tools? Don't miss out on:</p>
+        <h2>Wait, [Your Name]! Before you go...</h2>
+        <p>Are you sure you want to lose access to your exclusive Smodin tools? By canceling, you'll miss out on:</p>
         
         <div class="info-section">
             <div class="box smodin-benefits">
                 <h3>Your Smodin Advantages</h3>
                 <ul>
-                    <li><strong>Effortlessly rewrite and humanize texts</strong></li>
-                    <li><strong>Ensure originality with AI and plagiarism detectors</strong></li>
-                    <li><strong>Craft perfect articles and research papers</strong></li>
-                    <li><strong>Translate texts into multiple languages seamlessly</strong></li>
-                    <li><strong>Save hours of work and avoid writing errors</strong></li>
-                    <li><strong>Boost productivity by 70%</strong></li>
+                    <li><strong>Effortlessly rewrite and humanize</strong> texts with our Rewriter and Recreator tools</li>
+                    <li><strong>Ensure originality</strong> with our AI and plagiarism detectors</li>
+                    <li><strong>Craft perfect articles, essays, and research papers</strong> with ease</li>
+                    <li><strong>Translate texts seamlessly</strong> into multiple languages simultaneously</li>
+                    <li><strong>Save hours of work</strong> and avoid common writing pitfalls</li>
+                    <li><strong>Boost productivity by 70%</strong> and streamline your workflow</li>
                 </ul>
             </div>
             <div class="box average-stats">
                 <h3>Don’t lose your edge!</h3>
-                <p>Join millions who experience a <strong>70% boost in productivity.</strong> Can you afford to miss these essential tools?</p>
+                <p>Join millions who experience a <strong>70% boost in productivity!</strong> Can you afford to miss these essential tools?</p>
                 <button>Keep Your Competitive Advantage for Just $X/Month</button>
             </div>
         </div>
@@ -33,8 +33,16 @@
         <div class="testimonial">
             <h3>What Our Users Say</h3>
             <p>"Smodin has revolutionized my workflow! My writing is more efficient and stress-free." – Alex D.</p>
-            <p>"The productivity boost is unmatched. Highly recommend Smodin!" – Jamie L.</p>
+            <p>"The productivity boost I've experienced is unmatched. Highly recommend Smodin!" – Jamie L.</p>
         </div>
+
+        <div class="special-offer hidden">
+            <h3>Exclusive Offer Just for You!</h3>
+            <p id="offerText"></p>
+            <button onclick="hidePopup()">Claim Offer</button>
+        </div>
+
+        <button class="back-button">Actually, Keep My Account Active</button>
 
         <form>
             <label for="reason">Help us improve—why are you leaving?</label>
@@ -46,16 +54,9 @@
                 <li><input type="radio" name="reason" value="Too busy - don't have time" onclick="showPopup()"> I’m currently busy</li>
                 <li><input type="radio" name="reason" value="Other" onclick="showPopup()"> Other</li>
             </ul>
-            <label for="confirmation">I understand that I will immediately lose my benefits by proceeding.</label>
-            <button type="submit" class="cancel-button">Confirm Cancellation</button>
-            <button class="back-button">Actually, Keep My Account Active</button>
+  <label for="confirmation">I understand that I will immediately lose my benefits by proceeding.</label>
+            <button type="submit">Confirm Cancellation</button>
         </form>
-
-        <div class="special-offer hidden">
-            <h3>Wait!</h3>
-            <p id="offerText"></p>
-            <button onclick="hidePopup()">Explore Offer</button>
-        </div>
     </div>
     <script src="script.js"></script>
 </body>
