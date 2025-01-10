@@ -58,16 +58,21 @@ h2, h3 {
 button, .back-button {
     display: block;
     width: 100%;
-    background-color: #1e3a8a;
+    background-color: #ccc; /* Default disabled color */
     color: #fff;
     border: none;
     padding: 20px;
     margin-top: 20px;
-    cursor: pointer;
+    cursor: not-allowed;
     border-radius: 5px;
     font-size: 18px;
     text-align: center;
-    margin-bottom: 20px; /* Added spacing for visual separation */
+    margin-bottom: 20px;
+}
+
+button.active {
+    background-color: #1e3a8a; /* Active color */
+    cursor: pointer;
 }
 
 .special-offer {
@@ -83,14 +88,12 @@ button, .back-button {
     display: none;
 }
 
-/* General form enhancements */
 form label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-/* Range Slider Customization */
 .range-slider {
     position: relative;
     width: 100%;
@@ -105,10 +108,9 @@ form label {
 .range-labels {
     display: flex;
     justify-content: space-between;
-    user-select: none; /* Disable text selection for labels */
+    user-select: none;
 }
 
-/* Formatting for the feedback area */
 .feedback-text textarea {
     width: 100%;
     min-height: 150px;
@@ -124,7 +126,6 @@ form label {
     box-shadow: 0 0 8px rgba(74, 144, 226, 0.25);
 }
 
-/* Checkbox customization */
 .confirmation {
     display: flex;
     align-items: center;
