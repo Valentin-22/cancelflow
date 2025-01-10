@@ -66,12 +66,12 @@ h2, h3 {
 button, .back-button {
     display: block;
     width: 100%;
-    background-color: #ccc; /* Default disabled color */
+    background-color: #ccc;  /* Default color for submit button (disabled) */
     color: #fff;
     border: none;
     padding: 20px;
     margin-top: 20px;
-    cursor: not-allowed;
+    cursor: pointer;
     border-radius: 5px;
     font-size: 18px;
     text-align: center;
@@ -81,6 +81,11 @@ button, .back-button {
 button.active {
     background-color: #1e3a8a; /* Active color */
     cursor: pointer;
+}
+
+button[disabled] {
+    background-color: #ccc; /* Disabled color */
+    cursor: not-allowed;
 }
 
 .special-offer {
