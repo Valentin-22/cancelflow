@@ -18,24 +18,25 @@
                     <li><strong>Effortlessly rewrite and humanize</strong> texts with our Rewriter and Recreator tools</li>
                     <li><strong>Ensure originality and accuracy</strong> with our AI and plagiarism detectors</li>
                     <li><strong>Craft perfect articles, essays, and research papers</strong> with ease</li>
-                  <li><strong>Save countless hours of work:</strong> Whether you're rewriting, checking grammar, translating, solving homework, or generating citations, Smodin provides all the tools you need in one place.</li>
+                    <li><strong>Save countless hours of work:</strong> Whether you're rewriting, checking grammar, translating, solving homework, or generating citations, Smodin provides all the tools you need in one place.</li>
                 </ul>
             </div>
+
             <div class="box average-stats">
                 <h3>Don’t lose your edge!</h3>
                 <p>Join millions who experience a <strong>70% boost in productivity!</strong> Can you afford to miss these essential tools?</p>
                 <button>Keep Your Competitive Advantage for Just $X/Month</button>
-            </div>
+            </div> 
         </div>
 
-      <div class="testimonial">
-    <img src="1.jpg" alt="User 1">
-    <p>"Smodin has revolutionized my workflow! My writing is more efficient and stress-free." – Alex D.</p>
-</div>
-<div class="testimonial">
-    <img src="2.jpg" alt="User 2">
-    <p>"The productivity boost I've experienced is unmatched. Highly recommend Smodin!" – Jamie L.</p>
-</div>
+        <div class="testimonial">
+            <img src="1.jpg" alt="User 1">
+            <p>"Smodin has revolutionized my workflow! My writing is more efficient and stress-free." – Alex D.</p>
+        </div>
+        <div class="testimonial">
+            <img src="2.jpg" alt="User 2">
+            <p>"The productivity boost I've experienced is unmatched. Highly recommend Smodin!" – Jamie L.</p>
+        </div>
 
         <div class="special-offer hidden">
             <h3>Exclusive Offer Just for You!</h3>
@@ -55,9 +56,26 @@
                 <li><input type="radio" name="reason" value="Too busy - don't have time" onclick="showPopup()"> I’m currently busy</li>
                 <li><input type="radio" name="reason" value="Other" onclick="showPopup()"> Other</li>
             </ul>
-            <button type="submit">Confirm Cancellation</button>
+            
+            <div>
+                <label for="likelihood">How likely are you to return?</label>
+                <input type="range" id="likelihood" name="likelihood" min="1" max="10">
+            </div>
+
+            <div>
+                <label for="additionalFeedback">Anything else you would like to share about your experience?</label>
+                <textarea id="additionalFeedback" name="additionalFeedback" placeholder="Type your feedback here..."></textarea>
+            </div>
+
+            <div>
+                <input type="checkbox" id="confirmation" required>
+                <label for="confirmation">I understand that I will immediately lose my benefits by proceeding.</label>
+            </div>
+
+            <div class="form-disclaimer">* All fields required</div>
+            <button type="submit" disabled>Confirm Cancellation</button>
         </form>
-         <label for="confirmation">I understand that I will immediately lose my benefits by proceeding.</label>
+    
     </div>
     <script src="script.js"></script>
 </body>
