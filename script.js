@@ -18,3 +18,21 @@ function hidePopup() {
     const popup = document.querySelector('.special-offer');
     popup.style.display = 'none';
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const confirmationCheckbox = document.getElementById('confirmation');
+    const submitButton = document.querySelector('button[type="submit"]');
+
+    // Event listener to enable submit button when checkbox is checked
+    confirmationCheckbox.addEventListener('change', function() {
+        submitButton.disabled = !confirmationCheckbox.checked;
+    });
+
+    // Optionally: Validate other form elements as needed
+    const feedbackForm = document.querySelector('.feedback-form');
+    feedbackForm.addEventListener('change', function() {
+        // This callback can include more complex form validation logic as needed
+        let isFormValid = confirmationCheckbox.checked; // Example: Extend this logic
+        submitButton.disabled = !isFormValid;
+    });
+});
