@@ -46,8 +46,8 @@ body {
 .testimonial img {
     border-radius: 50%;
     margin-right: 20px;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
 }
 
 h2, h3 {
@@ -87,7 +87,7 @@ button, .back-button {
         flex-direction: column;
     }
     .testimonial img {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
     }
 }
