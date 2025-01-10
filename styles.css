@@ -67,6 +67,7 @@ button, .back-button {
     border-radius: 5px;
     font-size: 18px;
     text-align: center;
+    margin-bottom: 20px; /* Modified for additional spacing */
 }
 
 .special-offer {
@@ -82,12 +83,70 @@ button, .back-button {
     display: none;
 }
 
+.feedback-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.feedback-question {
+    margin-bottom: 15px;
+}
+
+#likelihood {
+    display: flex;
+    align-items: center;
+}
+
+#likelihood span {
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.feedback-text textarea {
+    width: 100%;
+    padding: 10px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid #d1d5db;
+    resize: none;
+}
+
+.confirmation {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.confirmation input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.form-disclaimer {
+    font-size: 0.8em;
+    color: #666666;
+    margin-top: 10px;
+}
+
 @media (max-width: 767px) {
     .info-section {
         flex-direction: column;
     }
+    
     .testimonial img {
         width: 40px;
         height: 40px;
+    }
+    
+    /* Responsive adjustments for mobile */
+    .feedback-form, .container {
+        padding: 10px;
     }
 }
