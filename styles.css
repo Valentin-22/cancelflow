@@ -33,6 +33,14 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.box.average-stats img {
+    width: 100%; 
+    height: auto; 
+    max-height: 200px; 
+    border-radius: 8px; 
+    margin-bottom: 15px; 
+}
+
 .testimonial {
     display: flex;
     align-items: center;
