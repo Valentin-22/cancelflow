@@ -23,16 +23,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const confirmationCheckbox = document.getElementById('confirmation');
     const submitButton = document.querySelector('button[type="submit"]');
 
-    // Event listener to enable submit button when checkbox is checked
+    // Initial state setup for the button according to the checkbox
+    toggleButtonState(confirmationCheckbox.checked, submitButton);
+
+    // Event listener to handle changes on the checkbox
     confirmationCheckbox.addEventListener('change', function() {
-        submitButton.disabled = !confirmationCheckbox.checked;
+        toggleButtonState(this.checked, submitButton);
     });
 
-    // Optionally: Validate other form elements as needed
+    // Optionally: Attach form change handler to re-validate on other form element changes
     const feedbackForm = document.querySelector('.feedback-form');
     feedbackForm.addEventListener('change', function() {
-        // This callback can include more complex form validation logic as needed
-        let isFormValid = confirmationCheckbox.checked; // Example: Extend this logic
-        submitButton.disabled = !isFormValid;
+        // Revalidating the form based on various conditions beyond just the checkbox
+        let isFormValid = confirmationCheckbox.checked; // Extend this logic as needed
+        toggleButtonState(isFormValid, submitButton);
     });
 });
+
+// Function to toggle button state and appearance based on validity
+function toggleButtonState(isValid, button) {
+    button.disabled = !isValid;
+    if (isValid) {
+        button.classList.add('active');
+    } else {
+        button.classList.remove('active');
+    }
+}
