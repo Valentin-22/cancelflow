@@ -8,24 +8,38 @@
 </head>
 <body>
     <div class="container">
-        <h2>Wait, [Name]! Before you go...</h2>
+        <h2>Wait, [Your Name]! Before you go...</h2>
         <p>Are you sure you want to lose access to your exclusive Smodin tools? By canceling, you'll miss out on:</p>
         
         <div class="info-section">
             <div class="box smodin-benefits">
                 <h3>Your Smodin Advantages</h3>
                 <ul>
-                    <li><strong>Effortlessly rewrite and humanize</strong> hundreds of texts with our Rewriter and Recreator tools</li>
+                    <li><strong>Effortlessly rewrite and humanize</strong> texts with our Rewriter and Recreator tools</li>
                     <li><strong>Ensure originality</strong> with our AI and plagiarism detectors</li>
-                    <li><strong>Craft perfect articles, essays and research papers</strong> with ease</li>
+                    <li><strong>Craft perfect articles, essays, and research papers</strong> with ease</li>
                     <li><strong>Translate texts seamlessly</strong> into multiple languages simultaneously</li>
+                    <li><strong>Save hours of work</strong> and avoid common writing pitfalls</li>
+                    <li><strong>Boost productivity by 70%</strong> and streamline your workflow</li>
                 </ul>
             </div>
             <div class="box average-stats">
                 <h3>Don’t lose your edge!</h3>
                 <p>Join millions who experience a <strong>70% boost in productivity!</strong> Can you afford to miss these essential tools?</p>
-                <button>Keep Your Competitive Advantage for Just $20/Month</button>
+                <button>Keep Your Competitive Advantage for Just $X/Month</button>
             </div>
+        </div>
+
+        <div class="testimonial">
+            <h3>What Our Users Say</h3>
+            <p>"Smodin has revolutionized my workflow! My writing is more efficient and stress-free." – Alex D.</p>
+            <p>"The productivity boost I've experienced is unmatched. Highly recommend Smodin!" – Jamie L.</p>
+        </div>
+
+        <div class="special-offer hidden">
+            <h3>Exclusive Offer Just for You!</h3>
+            <p id="offerText"></p>
+            <button onclick="hidePopup()">Claim Offer</button>
         </div>
 
         <button class="back-button">Actually, Keep My Account Active</button>
@@ -33,25 +47,13 @@
         <form>
             <label for="reason">Help us improve—why are you leaving?</label>
             <ul>
-                <li><input type="radio" name="reason" value="Too expensive"> It's a bit pricey</li>
-                <li><input type="radio" name="reason" value="Features not useful"> Features don't match my needs</li>
-                <li><input type="radio" name="reason" value="Seasonal use"> I only use it occasionally</li>
-                <li><input type="radio" name="reason" value="Performance issues"> There are performance hiccups</li>
-                <li><input type="radio" name="reason" value="Too busy - don't have time"> I’m currently busy</li>
-                <li><input type="radio" name="reason" value="Other"> Other</li>
+                <li><input type="radio" name="reason" value="Too expensive" onclick="showPopup('discount')"> It's a bit pricey</li>
+                <li><input type="radio" name="reason" value="Features not useful" onclick="showPopup()"> Features don't match my needs</li>
+                <li><input type="radio" name="reason" value="Seasonal use" onclick="showPopup('pause')"> I only use it occasionally</li>
+                <li><input type="radio" name="reason" value="Performance issues" onclick="showPopup()"> There are performance hiccups</li>
+                <li><input type="radio" name="reason" value="Too busy - don't have time" onclick="showPopup()"> I’m currently busy</li>
+                <li><input type="radio" name="reason" value="Other" onclick="showPopup()"> Other</li>
             </ul>
-            <label for="alternative">Explore new options or plan to return?</label>
-            <select name="alternative" id="alternative">
-                <option value="">Choose one</option>
-            </select>
-            <label for="return">How likely are you to return?</label>
-            <input type="range" name="return" min="1" max="10">
-            <label for="feedback">We value your feedback! Share any thoughts below.</label>
-            <textarea id="feedback" rows="4"></textarea>
-            <div>
-                <input type="checkbox" name="confirmation" id="confirmation">
-                <label for="confirmation">I understand that I will immediately lose my benefits by proceeding.</label>
-            </div>
             <button type="submit">Confirm Cancellation</button>
         </form>
     </div>
