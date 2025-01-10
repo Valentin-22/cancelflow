@@ -57,20 +57,26 @@
                 <li><input type="radio" name="reason" value="Other" onclick="showPopup()"> Other</li>
             </ul>
             
-            <div>
-                <label for="likelihood">How likely are you to return?</label>
-                <input type="range" id="likelihood" name="likelihood" min="1" max="10">
-            </div>
+           <div class="feedback-question">
+    <label for="likelihood">How likely are you to return?</label>
+    <div class="range-slider">
+        <input type="range" id="likelihood" name="likelihood" min="1" max="10">
+        <div class="range-labels">
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+        </div>
+    </div>
+</div>
 
-            <div>
-                <label for="additionalFeedback">Anything else you would like to share about your experience?</label>
-                <textarea id="additionalFeedback" name="additionalFeedback" placeholder="Type your feedback here..."></textarea>
-            </div>
+<div class="feedback-text">
+    <label for="additionalFeedback">Anything else you would like to share about your experience?</label>
+    <textarea id="additionalFeedback" name="additionalFeedback" placeholder="Type your feedback here..."></textarea>
+</div>
 
-            <div>
-                <input type="checkbox" id="confirmation" required>
-                <label for="confirmation">I understand that I will immediately lose my benefits by proceeding.</label>
-            </div>
+<div class="confirmation">
+    <input type="checkbox" id="confirmation" required>
+    <label for="confirmation">I understand that I will lose my benefits by proceeding.</label>
+</div>
+
 
             <div class="form-disclaimer">* All fields required</div>
             <button type="submit" disabled>Confirm Cancellation</button>
