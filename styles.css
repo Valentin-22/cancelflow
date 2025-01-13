@@ -66,7 +66,7 @@ h2, h3 {
 button, .back-button {
     display: block;
     width: 100%;
-    background-color: #1e3a8a; /* Ensure default color is blue */
+    background-color: #1e3a8a;
     color: #fff;
     border: none;
     padding: 20px;
@@ -80,7 +80,7 @@ button, .back-button {
 }
 
 button:not([disabled]) {
-    background-color: #1e3a8a; /* Ensure active buttons are blue */
+    background-color: #1e3a8a;
 }
 
 button[disabled] {
@@ -176,4 +176,53 @@ form label {
     .range-slider span {
         font-size: 12px;
     }
+}
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #555;
+}
+
+.modal button {
+    background-color: #1e3a8a;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: #163374;
 }
