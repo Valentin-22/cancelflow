@@ -4,7 +4,7 @@ function showPopup(reason) {
     const modalText = document.getElementById('modalText');
     const modalActionButton = document.getElementById('modalActionButton');
 
-    modal.classList.remove('hidden');
+    modal.style.display = 'flex'; // Show the modal
 
     switch (reason) {
         case 'discount':
@@ -38,9 +38,10 @@ function showPopup(reason) {
 
 function hidePopup() {
     const modal = document.getElementById('popupModal');
-    modal.classList.add('hidden');
+    modal.style.display = 'none'; // Hide the modal
 }
 
+// Add event listeners for the radio buttons
 document.querySelectorAll('input[name="reason"]').forEach((input) => {
     input.addEventListener('change', (event) => {
         switch (event.target.value) {
