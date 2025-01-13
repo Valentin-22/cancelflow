@@ -27,7 +27,7 @@
                 <p>Smodin users experience a <strong>70% boost in productivity!</strong> Can you afford to miss these essential tools?</p>
                 <img src="3.jpg" alt="Enhanced Productivity">
                 <button>Stay with Us! — Enjoy $30 Off Next Year</button>
-            </div>
+            </div> 
         </div>
 
         <button class="back-button">Actually, Keep My Account Active</button>
@@ -41,26 +41,16 @@
             <p>"The productivity boost I've experienced is unmatched. Highly recommend Smodin!" – Jamie L.</p>
         </div>
 
-        <!-- Modal Structure -->
-        <div id="popupModal" class="modal hidden">
-            <div class="modal-content">
-                <span class="close-button" onclick="hidePopup()">&times;</span>
-                <h3 id="modalTitle"></h3>
-                <p id="modalText"></p>
-                <button id="modalActionButton" onclick="handleAction()"></button>
-            </div>
-        </div>
-
         <form>
             <label for="reason">Help us improve—why are you leaving?</label>
             <div class="form-disclaimer">*Required</div>
             <ul>
                 <li><input type="radio" name="reason" value="Too expensive" onclick="showPopup('discount')"> It's a bit pricey</li>
-                <li><input type="radio" name="reason" value="Features not useful" onclick="showPopup()"> Features don't match my needs</li>
+                <li><input type="radio" name="reason" value="Features not useful" onclick="showPopup('default')"> Features don't match my needs</li>
                 <li><input type="radio" name="reason" value="Seasonal use" onclick="showPopup('pause')"> I only use it occasionally</li>
                 <li><input type="radio" name="reason" value="Performance issues" onclick="showPopup('support')"> There are performance hiccups</li>
-                <li><input type="radio" name="reason" value="Too busy - don't have time" onclick="showPopup()"> I’m currently busy</li>
-                <li><input type="radio" name="reason" value="Other" onclick="showPopup()"> Other</li>
+                <li><input type="radio" name="reason" value="Too busy - don't have time" onclick="showPopup('default')"> I’m currently busy</li>
+                <li><input type="radio" name="reason" value="Other" onclick="showPopup('default')"> Other</li>
             </ul>
 
             <div class="feedback-question">
@@ -95,6 +85,15 @@
             <button type="submit" disabled>Confirm Cancellation</button>
         </form>
     
+        <!-- Modal Structure -->
+        <div id="popupModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-button" onclick="hidePopup()">&times;</span>
+                <h3 id="modalTitle"></h3>
+                <p id="modalText"></p>
+                <button id="modalActionButton" onclick="handleAction()"></button>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
