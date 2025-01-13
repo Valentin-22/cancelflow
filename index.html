@@ -27,7 +27,7 @@
                 <p>Smodin users experience a <strong>70% boost in productivity!</strong> Can you afford to miss these essential tools?</p>
                 <img src="3.jpg" alt="Enhanced Productivity">
                 <button>Stay with Us! — Enjoy $30 Off Next Year</button>
-            </div> 
+            </div>
         </div>
 
         <button class="back-button">Actually, Keep My Account Active</button>
@@ -41,54 +41,55 @@
             <p>"The productivity boost I've experienced is unmatched. Highly recommend Smodin!" – Jamie L.</p>
         </div>
 
-        <div class="special-offer hidden">
-            <h3>Exclusive Offer Just for You!</h3>
-            <p id="offerText"></p>
-            <button onclick="hidePopup()">Claim Offer</button>
+        <!-- Modal Structure -->
+        <div id="popupModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-button" onclick="hidePopup()">&times;</span>
+                <h3 id="modalTitle"></h3>
+                <p id="modalText"></p>
+                <button id="modalActionButton" onclick="handleAction()"></button>
+            </div>
         </div>
-
 
         <form>
             <label for="reason">Help us improve—why are you leaving?</label>
-<div class="form-disclaimer">*Required</div>
+            <div class="form-disclaimer">*Required</div>
             <ul>
                 <li><input type="radio" name="reason" value="Too expensive" onclick="showPopup('discount')"> It's a bit pricey</li>
                 <li><input type="radio" name="reason" value="Features not useful" onclick="showPopup()"> Features don't match my needs</li>
                 <li><input type="radio" name="reason" value="Seasonal use" onclick="showPopup('pause')"> I only use it occasionally</li>
-                <li><input type="radio" name="reason" value="Performance issues" onclick="showPopup()"> There are performance hiccups</li>
+                <li><input type="radio" name="reason" value="Performance issues" onclick="showPopup('support')"> There are performance hiccups</li>
                 <li><input type="radio" name="reason" value="Too busy - don't have time" onclick="showPopup()"> I’m currently busy</li>
                 <li><input type="radio" name="reason" value="Other" onclick="showPopup()"> Other</li>
             </ul>
-            
-           <div class="feedback-question">
-    <label for="likelihood">How likely are you to return?</label>
-<div class="form-disclaimer">*Required</div>
-    <div class="range-slider">
-        <input type="range" id="likelihood" name="likelihood" min="1" max="10">
-        <div class="range-labels">
-            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
-        </div>
-    </div>
-</div>
 
+            <div class="feedback-question">
+                <label for="likelihood">How likely are you to return?</label>
+                <div class="form-disclaimer">*Required</div>
+                <div class="range-slider">
+                    <input type="range" id="likelihood" name="likelihood" min="1" max="10">
+                    <div class="range-labels">
+                        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                    </div>
+                </div>
+            </div>
 
-<div class="feedback-work">
-    <label for="additionalFeedback">Where will you continue your work?</label>
-<div class="form-disclaimer">*Required</div>
-    <textarea></textarea>
-</div>
+            <div class="feedback-work">
+                <label for="additionalFeedback">Where will you continue your work?</label>
+                <div class="form-disclaimer">*Required</div>
+                <textarea></textarea>
+            </div>
 
-<div class="feedback-text">
-    <label for="additionalFeedback">Anything else you would like to share about your experience?</label>
-<div class="form-disclaimer">*Required</div>
-    <textarea id="additionalFeedback" name="additionalFeedback" placeholder="Type your feedback here..."></textarea>
-</div>
+            <div class="feedback-text">
+                <label for="additionalFeedback">Anything else you would like to share about your experience?</label>
+                <div class="form-disclaimer">*Required</div>
+                <textarea id="additionalFeedback" name="additionalFeedback" placeholder="Type your feedback here..."></textarea>
+            </div>
 
-<div class="confirmation">
-    <input type="checkbox" id="confirmation" required>
-    <label for="confirmation">I understand that I will lose my benefits by proceeding.</label>
-</div>
-
+            <div class="confirmation">
+                <input type="checkbox" id="confirmation" required>
+                <label for="confirmation">I understand that I will lose my benefits by proceeding.</label>
+            </div>
 
             <div class="form-disclaimer">*Required</div>
             <button type="submit" disabled>Confirm Cancellation</button>
